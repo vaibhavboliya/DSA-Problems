@@ -1,1 +1,12 @@
+**Brute Force Solution **
 ​
+Using two pointers i and j we can traverse the list and find the max profit
+​
+Time Complexity  - O(n*n)
+space complexity - O(1)
+​
+Optimum Solution:
+keep track of minimum price and max profit
+​
+Time Complexity  - O(n)
+space complexity - O(1)
