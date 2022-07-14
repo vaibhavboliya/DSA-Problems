@@ -1,1 +1,2 @@
-​
+Use three index current,num1 and num2
+start filling value from last and while filling the values insert num1 or  num2 values whichever is greater and reduce the index value of current and selected numidx
