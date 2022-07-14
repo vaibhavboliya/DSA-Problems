@@ -1,12 +1,11 @@
 class Solution {
     public void merge(int[] nums1, int m, int[] nums2, int n) {
-        if(n!=0){
-            for(int i = m,j=0;i<nums1.length;i++){
-                nums1[i] = nums2[j];
-                j++;
-            }
-            Arrays.sort(nums1);
+        int num1idx = m-1,num2idx = n-1,currentidx =m+n-1;
+        while(num1idx>=0 && num2idx>=0){
+            nums1[currentidx--] = (nums1[num1idx]>nums2[num2idx]?nums1[num1idx--]:nums2[num2idx--]);
         }
-        
+        while(num2idx>=0){
+            nums1[currentidx--] = nums2[num2idx--];
+        }
     }
 }
