@@ -1,0 +1,13 @@
+Idea:
+​
+The only really tricky thing about counting in roman numerals is when a numeral is used as a subtractive value rather than an additive value. In "IV" for example, the value of "I", 1, is subtracted from the value of "V", 5. Otherwise, you're simply just adding the values of all the numerals.
+​
+The one thing we should realize about the subtractive numerals is that they're identifiable because they appear before a larger number. This means that the easier way to iterate through roman numerals is from right to left, to aid in the identifying process.
+​
+So then the easy thing to do here would be to iterate backwards through S, look up the value for each letter, and then add it to our answer (ans). If we come across a letter value that's smaller than the largest one seen so far, it should be subtracted rather than added.
+​
+The standard approach would be to use a separate variable to keep track of the highest value seen, but there's an easier trick here. Since numbers generally increase in a roman numeral notation from right to left, any subtractive number must also be smaller than our current ans.
+​
+So we can avoid the need for an extra variable here. We do run into the case of repeated numerals causing an issue (ie, "III"), but we can clear that by multiplying num by any number between 2 and 4 before comparing it to ans, since the numerals jump in value by increments of at least 5x.
+​
+Once we know how to properly identify a subtractive numeral, it's a simple matter to just iterate backwards through S to find and return the ans.
