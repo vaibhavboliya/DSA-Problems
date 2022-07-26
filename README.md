@@ -1,2 +1,2 @@
 # DSA-Problems
-Collection of LeetCode questions to ace the coding interview!
+Collection of LeetCode questions to improve the problem solving skills and thinking 
